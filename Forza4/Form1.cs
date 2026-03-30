@@ -14,7 +14,7 @@ namespace Forza4
         public Form1()
         {
             InitializeComponent();
-            dgvCampo.CellClick += dataGridView1_CellClick;
+            dgvCampo.CellClick += dgvCampo_CellClick;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Forza4
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCampo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             if (PartitaFinita) return;
@@ -97,6 +97,8 @@ namespace Forza4
             {
                 PartitaFinita = true;
                 MessageBox.Show("pareggio");
+                btnNuovaPartita.Enabled= true;
+                return;
             }
 
             // Cambia turno
@@ -173,7 +175,6 @@ namespace Forza4
             ImpostaGriglia();
             btnNuovaPartita.Enabled = false;
         }
-
 
     }
 }

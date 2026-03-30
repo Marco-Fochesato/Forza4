@@ -48,7 +48,7 @@
             dgvCampo.RowHeadersWidth = 82;
             dgvCampo.Size = new Size(808, 690);
             dgvCampo.TabIndex = 0;
-            dgvCampo.CellContentClick += dataGridView1_CellClick;
+            dgvCampo.CellContentClick += dgvCampo_CellClick;
             // 
             // btnNuovaPartita
             // 
